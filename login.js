@@ -1,6 +1,6 @@
 let menuUsername = document.querySelector(".menu-username");
 const loggedIn = JSON.parse(localStorage.getItem("CurrentAccount"));
-const notLoggedIn = loggedIn < "";
+const notLoggedIn = !loggedIn;
 const profilePicture = document.querySelector(".profile-picture");
 const pawIcon = document.getElementById("paw");
 const profileCircle = document.querySelector(".profile-circle");
@@ -17,8 +17,8 @@ if (loggedIn) {
   //menu bar text
   menuUsername.innerText = siteWideUsername;
   //profile picture & name in top bar
-  profilePicture.classList.remove("hidden");
-  pawIcon.remove(pawIcon);
+  // profilePicture.classList.remove("hidden");
+  // pawIcon.remove(pawIcon);
 }
 
 // login function

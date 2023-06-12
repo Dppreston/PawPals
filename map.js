@@ -1,6 +1,6 @@
 const loggedIn = JSON.parse(localStorage.getItem("CurrentAccount"));
 let menuUsername = document.querySelector(".menu-username");
-const notLoggedIn = loggedIn < "";
+const notLoggedIn = !loggedIn;
 const profilePicture = document.querySelector(".profile-picture");
 const pawIcon = document.getElementById("paw");
 

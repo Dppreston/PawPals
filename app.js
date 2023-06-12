@@ -37,11 +37,22 @@ createBtn.addEventListener("click", function (e) {
   }
 });
 
+const createForm = document.getElementById("create-account-form");
+
+//preventing enter key
+
+createForm.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+  }
+});
+
 // create account functions
 
 const question = document.querySelectorAll(".question-style");
 const nameBtn = document.getElementById("name-btn");
 let firstName = document.getElementById("first-name");
+const usernameQ = document.getElementById("q-1");
 
 //first name
 
@@ -59,6 +70,8 @@ nameBtn.addEventListener("click", function (e) {
 
 const birthdateBtn = document.getElementById("date-btn");
 let birthday = document.getElementById("birthday");
+const birthdayQ = document.getElementById("q-2");
+
 birthdateBtn.addEventListener("click", (e) => {
   if (birthday.value <= birthday.ariaValueMax) {
     question[1].classList.add("hidden");
@@ -258,7 +271,7 @@ loginBtn.addEventListener("click", (e) => {
 });
 
 const loggedIn = JSON.parse(localStorage.getItem("CurrentAccount"));
-const notLoggedIn = loggedIn < "";
+const notLoggedIn = !loggedIn;
 
 // not logged in
 
