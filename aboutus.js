@@ -12,7 +12,7 @@ userInfo = JSON.parse(localStorage.getItem("localUser"));
 if (notLoggedIn) {
   menuUsername.innerText = "login";
   logoBtn.addEventListener("click", (e) => {
-    location.href = "homepage.html";
+    location.href = "index.html";
   });
 }
 
