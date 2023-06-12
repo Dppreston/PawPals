@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/01f8e19168.js" crossorigin="anonymous"></script>
+  <title>Find Your Match | PawPals</title>
+</head>
+
+<body>
+  <div class="top-container">
+    <div class="logo-container">
+      <a href="dashboard.html"><img class="logo" src="pawpalsimgs/pawpalslogo.png" alt="logo" /></a>
+    </div>
+    <a href="match.html">
+      <h1>find your match</h1>
+    </a>
+    <a href="dogpark.html">
+      <h1>dog park map</h1>
+    </a>
+    <a href="aboutus.html">
+      <h1>about us</h1>
+    </a>
+    <a href="contact.html">
+      <h1>contact us</h1>
+    </a>
+    <div class="corner-profile">
+      <div class="top-menu-login-container">
+        <a href="#">
+          <h1 id="login-menu-btn-2" class="menu-username">Login</h1>
+        </a>
+      </div>
+      <div class="profile-circle">
+        <i id="paw" class="fa-solid fa-paw"></i>
+        <img id="profile-picture" class="profile-picture hidden" src="pawpalsimgs/profile-picture.png"
+          alt="profile-picture" />
+      </div>
+    </div>
+  </div>
+  <div class="match-container">
+    <div class="match-interface">
+      <div class="match-menu-container">
+        <div class="match-menu-navbar">
+          <i class="fa-solid fa-user navbar-icon-style nav-selected" id="match-nav-profile-btn"></i>
+          <i class="fa-solid fa-comments navbar-icon-style" id="match-nav-messages-btn"></i>
+          <i class="fa-solid fa-user-group navbar-icon-style" id="match-nav-matches-btn"></i>
+          <i class="fa-solid fa-gear navbar-icon-style" id="match-nav-settings-btn"></i>
+        </div>
+        <div class="match-menu-interface">
+          <div class="match-menu-content-style match-menu-profile" id="match-menu-profile">
+            <section class="match-menu-card-names">
+              <div class="match-menu-card-dog-name-container">
+                <h1 id="match-menu-profile-dog-name">Piper</h1>
+              </div>
+              <section class="match-menu-card-age-owner">
+                <h2>Age:<span id="match-menu-profile-dog-age"></span></h2>
+                <h2 id="match-menu-profile-dog-gender">Female</h2>
+                <h2>Owner:<span id="match-menu-profile-dog-owner"></span></h2>
+              </section>
+            </section>
+            <section class="match-menu-card-dog-image">
+              <i class="dog-picture fa-solid fa-paw"></i>
+            </section>
+            <section class="match-menu-card-bio">
+              <h2 id="match-menu-profile-dog-bio"></h2>
+            </section>
+            <section class="match-menu-card-gender-breed-size">
+              <h2>size:<span id="match-menu-profile-dog-size"></span></h2>
+              <h2>Breed:<span id="match-menu-profile-dog-breed"></span></h2>
+            </section>
+            <section class="match-menu-card-mood-motivation">
+              <h2>Mood:<span id="match-menu-profile-dog-mood"></span></h2>
+              <h2>Motivation:<span id="match-menu-profile-dog-motivation"></span></h2>
+            </section>
+          </div>
+          <div class="match-menu-content-style match-menu-messages hidden" id="match-menu-messages">
+            <div class="top-bar-messages">
+              <div id="back-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+              </div>
+              <h1>Messages</h1>
+              <div id="create-message-btn">
+                <i class="fa-solid fa-pen"></i>
+              </div>
+            </div>
+            <div class="match-menu-message-container message-container-style" id="message-dashboard">
+            </div>
+            <div class="create-message-container message-container-style hidden" id="create-message">
+              <h2>Please Select Someone To Chat With</h2>
+              <div class="create-message-selection" id="create-message-selection">
+                <div class="message-recent-matches">
+                  <div class="create-message-user-container" id="message-to-match-1">
+                    <div class="recent-match-img-container">
+                      <img class="recent-match-new-message-img" src="pawpalsimgs/profile-picture.png" />
+                    </div>
+                    <h2 class="new-message-username">PawPals</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="selected-user-messages-container message-container-style hidden" id="selected-user-message">
+              <div class="message-user-container">
+                <div class="message-selected-user-img-container">
+                  <img class="message-selected-user-img" id="message-selected-user-img"
+                    src="pawpalsimgs/pawpalsdog.png" />
+                </div>
+                <h2 class="messaging-username"></h2>
+              </div>
+              <div class="message-body-container">
+                <div class="new-recieved-message">
+                  <p>Welcome To PawPals and Congratulations On Your First Match! <br> <br> This is where you message
+                    other
+                    users!
+                    <br> <br>
+                    Feel free to send them a message!
+                  </p>
+                </div>
+              </div>
+              <div class="message-input-container">
+                <input type="text" class="message-input" id="message-input"
+                  placeholder="Type Your Message Here"></input>
+                <i class="fa-solid fa-arrow-right message-send-btn" id="message-send-btn"></i>
+              </div>
+            </div>
+          </div>
+          <div class="match-menu-content-style match-menu-matches hidden" id="match-menu-matches">
+            <h1>Recent Matches</h1>
+            <div class="recent-match-container">
+            </div>
+          </div>
+          <div class="match-menu-content-style match-menu-settings hidden" id="match-menu-settings">
+            <div class="settings-top-bar">
+              <div class="settings-back-btn hidden" id="settings-back-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+              </div>
+              <h1>Settings</h1>
+            </div>
+            <div class="settings-container">
+              <div class="settings-menu settings-page-style">
+                <div class="change-style" id="change-username">
+                  <h1>Change Username</h1>
+                  <span class="current-username" id="current-username"></span>
+                </div>
+                <div class="change-style" id="change-password">
+                  <h1>Change Password</h1>
+                  <span class="current-password" id="current-password"></span>
+                </div>
+                <div class="change-style" id="change-dog-bio">
+                  <h1>Change Dog Bio</h1>
+                  <span class="current-bio" id="current-bio"></span>
+                </div>
+                <div class="change-style" id="delete-account">
+                  <h1>Delete Account</h1>
+                </div>
+              </div>
+              <div class="settings-change-username-page settings-page-style hidden">
+                <div class="current-username-container current-styles">
+                  <h1>Current Username</h1>
+                  <span class="current-username">hello</span>
+                </div>
+                <div class="change-current-username-container">
+                  <h1>Enter New Username</h1>
+                  <input type="text" id="new-username-input">
+                  <div class="confirm-btn">
+                    <h2 id="new-username-confirm">Confirm</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="settings-change-password-page settings-page-style hidden">
+                <div class="current-password-container current-styles">
+                  <h1>Current Password</h1>
+                  <span class="current-password">hello</span>
+                </div>
+                <div class="change-current-password-container">
+                  <h1>Enter New Password</h1>
+                  <input type="text" id="new-password-input">
+                  <div class="confirm-btn">
+                    <h2 id="new-password-confirm">Confirm</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="settings-change-bio-page settings-page-style hidden">
+                <div class="current-bio-container current-styles">
+                  <h1>Current Bio</h1>
+                  <span class="current-bio">hello</span>
+                </div>
+                <div class="change-current-bio-container">
+                  <h1>Enter New Bio</h1>
+                  <textarea id="new-bio-input"></textarea>
+                  <div class="confirm-btn">
+                    <h2 id="new-bio-confirm">Confirm</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="settings-delete-account-page settings-page-style hidden">
+                <div class="delete-page-container current-styles">
+                  <h1>Are you sure you want to delete your account?</h1>
+                  <div class="delete-btn-container">
+                    <h2 id="delete-account-confirm">Yes</h2>
+                    <h2 id="delete-account-deny">NOOOOOOO</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="match-card-container">
+        <div class="match-card">
+          <section class="card-names">
+            <h1 id="dog-name"></h1>
+            <section class="card-age-owner">
+              <h2>Age:<span id="dog-age"></span></h2>
+              <h2 id="dog-gender"></h2>
+              <h2>Owner:<span id="owner-name"></span></h2>
+            </section>
+          </section>
+          <section class="card-dog-image">
+            <i class="dog-picture fa-solid fa-paw"></i>
+          </section>
+          <section class="card-bio">
+            <h2 id="dog-bio"> </h2>
+          </section>
+          <section class="card-gender-breed-size">
+            <h2>size:<span id="dog-size"></span></h2>
+            <h2>Breed:<span id="dog-breed"></span></h2>
+          </section>
+          <section class="card-mood-motivation">
+            <h2>Mood:<span id="dog-mood"></span></h2>
+            <h2>Motivation:<span id="dog-motivation"></span></h2>
+          </section>
+        </div>
+        <div class="match-buttons">
+          <i class="fa-regular fa-circle-xmark match-button-style" id="x-button"></i>
+          <i class="fa-regular fa-circle-check match-button-style" id="check-button"></i>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <h2>
+        <i class="fa-regular fa-copyright"></i> PawPals 2023 All Rights Reserved
+      </h2>
+    </footer>
+    <script src="match.js"></script>
+</body>
+
+</html>

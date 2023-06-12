@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/01f8e19168.js" crossorigin="anonymous"></script>
+  <title>PawPals | The Dog Friend Finder</title>
+</head>
+
+<body>
+  <div class="top-container">
+    <div class="logo-container">
+      <a href="homepage.html"><img class="logo" src="pawpalsimgs/pawpalslogo.png" alt="logo" /></a>
+    </div>
+    <a href="#">
+      <h1 class="locked-alert">find your match<i class="fa-solid fa-lock locked"></i></h1>
+    </a>
+    <a href="#">
+      <h1 class="locked-alert">dog park map<i class="fa-solid fa-lock locked"></i></h1>
+    </a>
+    <a href="aboutus.html">
+      <h1>about us</h1>
+    </a>
+    <a href="contact.html">
+      <h1>contact us</h1>
+    </a>
+    <div class="corner-profile">
+      <div class="top-menu-login-container">
+        <a href="#">
+          <h1 id="login-menu-btn-2" class="menu-username">Login</h1>
+        </a>
+      </div>
+      <div class="profile-circle">
+        <i class="fa-solid fa-paw"></i>
+        <img id="profile-picture" class="hidden" src="pawpalsimgs/profile-picture.png" alt="profile-picture" />
+      </div>
+    </div>
+  </div>
+  <div class="intro-container">
+    <div class="intro-text">
+      <h1>Welcome to PawPals! <i class="fa-solid fa-paw"></i></h1>
+      <h2>
+        we use owner fed criteria to match compatible dog breeds for fun play
+        dates!
+      </h2>
+      <h2>
+        <a id="create-account-btn" href="#">create an account</a> or
+        <a id="login-menu-btn-1" href="#">login</a> to get started!
+      </h2>
+      <div class="soc-container">
+        <a href="#"><i class="socials fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="socials fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="socials fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="socials fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="image-container">
+      <img id="intro-image" src="pawpalsimgs/homepagebackground.jpeg" alt="multiple dogs on log" />
+    </div>
+  </div>
+  <div class="login-container hidden">
+    <form id="login-form">
+      <h2 class="incorrect-login hidden">Incorrect Login!</h2>
+      <h1>LOG-IN</h1>
+      <input type="text" class="username" name="username" placeholder="Username" id="login-username" required />
+      <input type="password" class="password" name="password" placeholder="Password" id="login-password" required />
+      <input type="submit" value="login" id="login-btn" />
+    </form>
+  </div>
+  <div class="create-container hidden">
+    <form>
+      <div class="create-container">
+        <div class="create-account">
+          <div class="question-style" id="q-1">
+            <h1>Please create a username</h1>
+            <input id="first-name" type="name" placeholder="e.g ILoveDogs10" maxlength="10" required />
+            <button class="button-style" type="submit" id="name-btn">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="question-style hidden" id="q-2">
+            <h1>Please Enter Your Birthdate</h1>
+            <h2>Must be 18 years or older to register</h2>
+            <input id="birthday" type="date" aria-valuemax="2005-12-31" required />
+            <button class="button-style" type="submit" id="date-btn">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="question-style hidden" id="q-3">
+            <h1>Please Enter Your Email</h1>
+            <input id="email" type="email" max-length="30" placeholder="e.g JohnDoe@gmail.com" required />
+            <button class="button-style" type="submit" id="email-btn">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="question-style hidden" id="q-4">
+            <h1>Create A Password</h1>
+            <input id="password" type="password" aria-valuemin="8" required />
+            <button class="button-style" type="submit" id="password-btn">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="question-style hidden" id="q-5">
+            <h1>What's your Dog's name?</h1>
+            <input id="dog-name" type="name" placeholder="Name" maxlength="20" value="" required />
+            <button class="button-style" type="submit" id="dog-name-btn">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="question-style hidden" id="q-6">
+            <h1>What's your Dog's Age?</h1>
+            <input id="dog-age" type="number" min="1" max="20" required />
+            <button class="button-style" type="submit" id="dog-age-btn">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="question-style hidden" id="q-7">
+            <h1>What's your dog's gender?</h1>
+            <div class="gender-container">
+              <select id="dog-gender" class="selection-style">
+                <option id="male" value="male">Male</option>
+                <option id="female" value="female">Female</option>
+              </select>
+            </div>
+            <button class="button-style" type="submit" id="dog-gender-btn">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="question-style hidden" id="q-8">
+            <h1>Breed and size</h1>
+            <input id="breed" type="name" placeholder="Breed" required />
+            <select class="selection-style" id="size">
+              <option id="small" value="small">Small</option>
+              <option id="medium" value="medium">Medium</option>
+              <option id="large" value="large">Large</option>
+            </select>
+            <button class="button-style" type="submit" id="breed-btn">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="question-style hidden" id="q-9">
+            <h1>Motivation / Mood</h1>
+            <select class="selection-style" id="motivation">
+              <option>Motivation</option>
+              <option id="toys" value="toys">toys</option>
+              <option id="food" value="food">food</option>
+              <option id="exercise" value="exercise">exercise</option>
+            </select>
+            <select class="selection-style" id="mood">
+              <option>Mood</option>
+              <option id="couch-potato" value="couch-potato">
+                couch potato
+              </option>
+              <option id="mild" value="mild">mild</option>
+              <option id="hyper" value="hyper">hyper</option>
+            </select>
+            <button class="button-style" type="submit" id="mood-btn">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="question-style hidden" id="q-11">
+            <h1>Tell us a little about your dog!</h1>
+            <textarea name="bio" id="bio-input" cols="30" rows="10" maxlength="250"></textarea>
+            <button class="button-style" type="submit" id="bio-btn">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="question-style hidden " id="q-10">
+            <h1>Thank you for signing up!</h1>
+            <h2>Please wait while we authorize your account</h2>
+            <div class="loading-container">
+              <i class="fa-solid fa-paw"></i>
+            </div>
+            <a class="create-login-anchor" href="#">
+              <h1 class="create-account-login-btn hidden">Login</h1>
+            </a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <footer>
+    <h2>
+      <i class="fa-regular fa-copyright"></i> PawPals 2023 All Rights Reserved
+    </h2>
+    <script src="app.js"></script>
+</body>
+
+</html>

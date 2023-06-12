@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/01f8e19168.js" crossorigin="anonymous"></script>
+  <title>Your DashBoard</title>
+</head>
+
+<body>
+  <div class="top-container">
+    <div class="logo-container">
+      <a href="dashboard.html"><img class="logo" src="pawpalsimgs/pawpalslogo.png" alt="logo" /></a>
+    </div>
+    <a href="match.html">
+      <h1>find your match</h1>
+    </a>
+    <a href="dogpark.html">
+      <h1>dog park map</h1>
+    </a>
+    <a href="aboutus.html">
+      <h1>about us</h1>
+    </a>
+    <a href="contact.html">
+      <h1>contact us</h1>
+    </a>
+    <div class="corner-profile">
+      <div class="top-menu-login-container">
+        <a href="#">
+          <h1 id="login-menu-btn-2" class="menu-username">Login</h1>
+        </a>
+      </div>
+      <div class="profile-circle">
+        <i id="paw" class="fa-solid fa-paw"></i>
+        <img id="profile-picture" class="profile-picture hidden" src="pawpalsimgs/profile-picture.png"
+          alt="profile-picture" />
+      </div>
+    </div>
+  </div>
+  <div class="dashboard-container">
+    <div class="profile-card">
+      <section class="card-names">
+        <div class="dog-name-container">
+          <h1 id="dog-name"></h1>
+        </div>
+        <section class="card-age-owner">
+          <h2>Age:<span id="dog-age"></span></h2>
+          <h2 id="dog-gender"></h2>
+          <h2>Owner:<span id="owner-name"></span></h2>
+        </section>
+      </section>
+      <section class="card-dog-image">
+        <i class="dog-picture fa-solid fa-paw"></i>
+      </section>
+      <section class="card-bio">
+        <h2 id="dog-bio"> </h2>
+      </section>
+      <section class="card-gender-breed-size">
+        <h2>size:<span id="dog-size"></span></h2>
+        <h2>Breed:<span id="dog-breed"></span></h2>
+      </section>
+      <section class="card-mood-motivation">
+        <h2>Mood:<span id="dog-mood"></span></h2>
+        <h2>Motivation:<span id="dog-motivation"></span></h2>
+      </section>
+    </div>
+    <div class="dashboard-content">
+      <h1 class="welcome">Welcome, <br><span id="welcome-username"></span></h1>
+    </div>
+
+  </div>
+  <footer>
+    <h2>
+      <i class="fa-regular fa-copyright"></i> PawPals 2023 All Rights Reserved
+    </h2>
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

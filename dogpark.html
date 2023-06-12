@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/01f8e19168.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css" rel="stylesheet" />
+  <title>Dog Park Map</title>
+</head>
+
+<body>
+  <div class="top-container">
+    <div class="logo-container">
+      <a href="dashboard.html"><img class="logo" src="pawpalsimgs/pawpalslogo.png" alt="logo" /></a>
+    </div>
+    <a href="match.html">
+      <h1>find your match</h1>
+    </a>
+    <a href="dogpark.html">
+      <h1>dog park map</h1>
+    </a>
+    <a href="aboutus.html">
+      <h1>about us</h1>
+    </a>
+    <a href="contact.html">
+      <h1>contact us</h1>
+    </a>
+    <div class="corner-profile">
+      <div class="top-menu-login-container">
+        <a href="#">
+          <h1 id="login-menu-btn-2" class="menu-username">Login</h1>
+        </a>
+      </div>
+      <div class="profile-circle">
+        <i id="paw" class="fa-solid fa-paw"></i>
+        <img id="profile-picture" class="profile-picture hidden" src="pawpalsimgs/profile-picture.png"
+          alt="profile-picture" />
+      </div>
+    </div>
+  </div>
+  <div class="map-container">
+    <h1>Dog Parks</h1>
+    <h2>
+      we currently only support michigan. new dog parks are being added every
+      day
+    </h2>
+    <div class="container-style map">
+      <div id="map"></div>
+      <script src="map.js"></script>
+    </div>
+  </div>
+
+  <footer>
+    <h2>
+      <i class="fa-regular fa-copyright"></i> PawPals 2023 All Rights Reserved
+    </h2>
+  </footer>
+  <script src="map.js"></script>
+</body>
+
+</html>
